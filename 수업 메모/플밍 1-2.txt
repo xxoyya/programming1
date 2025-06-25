@@ -1,0 +1,18 @@
+플밍 1-2
+
+score = [38, 37, ... 38, 76]
+
+학점(T)
+for in a score
+ if s >= 70 then grade = A
+ if s >= 60 then grade = B
+ if s >= 50 then grade = C
+ if s >= 40 then grade = D
+ otherwise grade = F
+end for
+
+if. 점수 70 이상: A
+elif. 점수 60 이상: B
+elif. 점수 50 이상: C
+elif. 점수 40 이상: D
+else. 점수 40 이상x: F

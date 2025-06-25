@@ -1,0 +1,49 @@
+swap 함수 내부에서 값을 바꾸어도 함수 밖에서는 바뀌지 않는 것을 확인할 수 있다.
+
+ 
+
+ 
+
+ 
+
+Call by reference
+함수에서 값을 전달하는 대신 주소값을 전달하는 방식이다.
+
+사실 엄밀히 따지자면 C언어의 참조 방식은 주소값 자체를 "복사"해서 넘겨주는 것이라서 call by value라고 한다. 또 이렇게 주소값을 복사해서 넘겨주는 방식을 call by address라고 부른다고 한다.
+
+하지만 결과적으로는 call by reference처럼 사용하기 때문에 일반적으로 call by reference라고 설명한다.
+
+(나도 학부 때 이렇게 배웠던 것 같다.)
+Python
+그렇다면 파이썬에서는 어떤 참조 호출 방식을 사용할까?
+
+바로 Call by assignment라는 방식이다.
+
+넘겨지는 객체의 종류에 따라 Call by Reference 또는 Call by Value가 결정된다.
+
+ 
+
+Call by assignment
+1. immutable 자료형: Call by Value
+
+int, float, str, tuple
+
+단일값이거나 static 속성
+
+함수에 인자로 넘겨줄 때 call by value로 넘어간다. 함수 내부에서 값이 바뀌어도 외부의 변수에 영향이 없다.
+
+ 
+
+2. mutable 자료형: Call by Reference
+
+list, dict, set
+
+함수에 인자로 넘겨줄 때 object의 주소가 넘어간다. 함수 내부에서 object의 element를 변경할 수 있다.
+
+ 
+
+ 
+
+꼭 함수를 호출하지 않아도 이를 확인할 수 있다.
+
+다음의 코드를 보자.
